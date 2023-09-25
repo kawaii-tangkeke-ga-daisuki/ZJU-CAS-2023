@@ -143,10 +143,13 @@ module CtrlUnit(
 
     assign rs2use = R_valid | S_valid | B_valid;                         //to fill sth. in 
 
-    wire mem_hazard, ex_hazard, ctrl_hazard;
-    assign mem_hazard = (((rs1use) & (inst[19:15] != 5'b0)) | ((rs2use) & (inst[24:20] != 5'b0)));
-    assign ex_hazard = mem_hazard;
-    assign ctrl_hazard = Branch;
-    assign hazard_optype = ;                  //to fill sth. in 
+    wire [1:0] alu_haz, ld_haz, sd_haz, no_haz;
+    assign no_haz = 2'b00;
+    assign alu_haz = 2'b01;
+    assign ld_haz = 2'b10;
+    assign sd_haz = 2'b11;
+    assign hazard_optype = {2{R_valid | I_valid} & alu_haz |
+                            2{L_valid} & ld_haz |
+                            2{S_valid} & sd_haz};                  //to fill sth. in 
 
 endmodule
