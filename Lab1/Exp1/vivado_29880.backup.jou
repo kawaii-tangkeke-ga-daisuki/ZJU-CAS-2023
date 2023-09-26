@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Sep 25 18:45:57 2023
+# Process ID: 29880
+# Current directory: C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12980 C:\Users\12656\Desktop\Computer Arch\Lab1\Exp1\Exp1.xpr
+# Log file: C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/vivado.log
+# Journal file: C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1\vivado.jou
+# Running On: DESKTOP-JLL8AE5, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34085 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.xpr}
+upgrade_project -migrate_output_products
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+add_bp {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v} 57
+remove_bps -file {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v} -line 57
+add_bp {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v} 57
+remove_bps -file {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v} -line 57
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/core/hazard_unit/rd_EXE}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/core/hazard_unit/rd_MEM}} 
+current_wave_config {core_sim_behav.wcfg}
+add_wave {{/core_sim/core/hazard_unit/rs1_ID}} 
+run all
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/sim/core_sim_behav.wcfg}
+source core_sim.tcl
+close_sim
