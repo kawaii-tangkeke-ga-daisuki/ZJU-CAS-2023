@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="13501fs"></ZoomEndTime>
-      <Cursor1Time time="1fs"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="30.231 ns"></ZoomEndTime>
+      <Cursor1Time time="10.160 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <NameColumnWidth column_width="272"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="33" />
    <wvobject fp_name="/core_sim/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -131,5 +131,25 @@
    <wvobject fp_name="/core_sim/core/forward_ctrl_ls" type="logic">
       <obj_property name="ElementShortName">forward_ctrl_ls</obj_property>
       <obj_property name="ObjectShortName">forward_ctrl_ls</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/hazard_unit/hazard_optype_EXE" type="array">
+      <obj_property name="ElementShortName">hazard_optype_EXE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard_optype_EXE[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/hazard_unit/hazard_optype_MEM" type="array">
+      <obj_property name="ElementShortName">hazard_optype_MEM[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hazard_optype_MEM[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/hazard_unit/forward_rs1_EXE" type="logic">
+      <obj_property name="ElementShortName">forward_rs1_EXE</obj_property>
+      <obj_property name="ObjectShortName">forward_rs1_EXE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/hazard_unit/forward_rs1_MEM" type="logic">
+      <obj_property name="ElementShortName">forward_rs1_MEM</obj_property>
+      <obj_property name="ObjectShortName">forward_rs1_MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/hazard_unit/forward_rs1_LD" type="logic">
+      <obj_property name="ElementShortName">forward_rs1_LD</obj_property>
+      <obj_property name="ObjectShortName">forward_rs1_LD</obj_property>
    </wvobject>
 </wave_config>

@@ -148,7 +148,7 @@ module CtrlUnit(
     assign alu_haz = 2'b01;
     assign ld_haz = 2'b10;
     assign sd_haz = 2'b11;
-    assign hazard_optype = {2{R_valid | I_valid}} & alu_haz |
+    assign hazard_optype = {2{R_valid | I_valid | B_valid | JALR | AUIPC | JAL}} & alu_haz |
                            {2{L_valid}} & ld_haz |
                            {2{S_valid}} & sd_haz;                  //to fill sth. in 
 
