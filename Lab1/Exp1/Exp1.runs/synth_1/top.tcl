@@ -130,6 +130,8 @@ read_xdc {{C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/constraint.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/constraint.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.srcs/utils_1/imports/synth_1/top.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

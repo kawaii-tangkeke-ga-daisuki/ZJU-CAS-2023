@@ -86,7 +86,7 @@ module CtrlUnit(
     wire S_valid = SW | SH | SB;
 
 
-    assign Branch = B_valid | JAL | JALR | AUIPC;                       //to fill sth. in 
+    assign Branch = (B_valid&cmp_res) | (JAL&cmp_res) | (JALR&cmp_res);                       //to fill sth. in 
 
     parameter Imm_type_I = 3'b001;
     parameter Imm_type_B = 3'b010;

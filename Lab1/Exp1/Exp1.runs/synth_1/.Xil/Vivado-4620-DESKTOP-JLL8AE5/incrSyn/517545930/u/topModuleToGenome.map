@@ -1,0 +1,2 @@
+RV32core: RV32core__GB1, RAM_B, 
+RAM_B: RAM_B, 

@@ -1,0 +1,187 @@
+Data_For_RDAFlowver5.0
+	top level˚P
+topä
+LinkDesign_Blackboxes
+vga/c2i1	Code2Inst
+vga/c2i2	Code2Inst
+vga/c2i3	Code2Inst
+vga/c2i4	Code2Inst
+vga/c2i5	Code2Inst‹+
+synthFileNamesJ
+10DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdG
+11AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdK
+12EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdI
+13CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdI
+14CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdF
+20@C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDSUB_MACRO.vM
+15GC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdH
+21BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vH
+16BC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdK
+22EC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vC
+17=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MACC_MACRO.vhdC
+18=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MULT_MACRO.vhdH
+23BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vG
+19AC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDMACC_MACRO.vL
+24FC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vJ
+25DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vD
+30>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames73J
+26DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vJ
+31DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd=
+18C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VCOMP.vhdN
+27HC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vK
+32EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd<
+27C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VPKG.vhdI
+28CC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.vD
+33>C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ALU.v:
+35C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.vD
+29>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MACC_MACRO.vM
+34GC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/CPUTEST.v=
+48C:/Xilinx/Vivado/2022.2/scripts/rt/data/internal_cells.vO
+35IC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/Code2Inst.vL
+40FC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/MUX2T1_32.v3
+5.C:/Xilinx/Vivado/2022.2/scripts/rt/data/BUFT.vI
+36CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/CtrlUnit.vL
+41FC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/MUX4T1_32.vF
+6AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdM
+37GC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/Font816.vF
+42@C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RAM_B.vE
+7@C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdT
+38NC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.vH
+43BC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/REG32.vD
+8?C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdG
+39AC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ImmGen.vK
+44EC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_EX_MEM.vE
+50?C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/Regs.vF
+9AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdJ
+45DC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.vM
+51GC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/VGATEST.vJ
+46DC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_IF_ID.vI
+52CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/add_32.vK
+47EC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_MEM_WB.vN
+53HC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/btn_scan.vF
+48@C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.vO
+54IC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/function.vhI
+49CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RV32core.vU
+60OC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/parallel2serial.vN
+55HC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/clk_diff.vI
+61CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/vga.vI
+56CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/cmp_32.vI
+62CC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/top.vO
+57IC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/debug_clk.v\
+63VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/std_1164.vhdM
+58GC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/display.v\
+64VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/standard.vhdP
+59JC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/my_clk_gen.v\
+70VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/prmtvs_b.vhd_
+65YC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/numeric_std.vhd\
+71VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/syn_arit.vhdZ
+66TC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/textio.vhd\
+72VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/syn_unsi.vhd\
+67VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/timing_p.vhd\
+68VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/timing_b.vhd\
+69VC:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/1993/src/prmtvs_p.vhdÚ
+
+synthStatsC
+caseNotFullNoDefault
+L48
+Mnullname
+F60
+
+OstateH
+caseNotFullNoDefault
+L99
+Mnullname
+F60
+O
+next_stateC
+caseNotFullNoDefault
+L48
+Mnullname
+F60
+
+OstateH
+caseNotFullNoDefault
+L99
+Mnullname
+F60
+O
+next_stateF
+rammappedtoregisters
+L33
+Mnullname
+F42
+Odata_regç
+ElaboratedNamesForRQSÛ
+DSP_RAMP
+512026F {vga/ascii_code3_i__1} {vga/ascii_code4_i__2} {vga/ascii_code5_i__0}  
+110613 {core/alu/res_SUB_i}  
+110620 {vga/U12/h_count0_i}  
+98325 {core/alu/res_subu_i} 4
+1118234) {vga/num2str0_i__0} {vga/num2str0_i__2} 
+471066 {vga/data_buf_reg} &
+98327 {core/data_ram/douta2_i__0} #
+233498 {vga/char_index_col0_i} ©
+0£ {DISPLAY/P2S_LED/busy0_i} {DISPLAY/P2S_LED/finish0_i} {DISPLAY/P2S_LED/s_clr0_i} {DISPLAY/P2S_SEG/busy0_i} {DISPLAY/P2S_SEG/finish0_i} {DISPLAY/P2S_SEG/s_clr0_i} 
+360474 {vga/MEMBUF_reg} "
+491524 {DISPLAY/clk_count0_i} !
+614426 {vga/ascii_code_i__9} "
+229402 {vga/char_index_row_i} ]
+364570S {vga/code_exe_i} {vga/code_id_i} {vga/code_if_i} {vga/code_mem_i} {vga/code_wb_i} √
+159748∏ {DISPLAY/digit2seg0_i} {DISPLAY/digit2seg1_i} {DISPLAY/digit2seg2_i} {DISPLAY/digit2seg3_i} {DISPLAY/digit2seg4_i} {DISPLAY/digit2seg5_i} {DISPLAY/digit2seg6_i} {DISPLAY/digit2seg_i} .
+684058$ {vga/strdata_i} {vga/strdata_i__0} 
+1024026 {vga/number0_i} 
+213018 {vga/col_addr_i} '
+102423 {core/data_ram/douta2_i__1} P
+544794F {vga/ascii_code1_i__2} {vga/ascii_code2_i__2} {vga/ascii_code3_i__4}  
+172053 {core/alu/res_Ap4_i}  
+159772 {vga/U12/v_count0_i} G
+507930= {vga/ascii_code3_i} {vga/ascii_code4_i} {vga/ascii_code5_i} ¿
+200719µ {core/register/register_reg[10]_i} {core/register/register_reg[11]_i} {core/register/register_reg[12]_i} {core/register/register_reg[13]_i} {core/register/register_reg[14]_i} {core/register/register_reg[15]_i} {core/register/register_reg[16]_i} {core/register/register_reg[17]_i} {core/register/register_reg[18]_i} {core/register/register_reg[19]_i} {core/register/register_reg[1]_i} {core/register/register_reg[20]_i} {core/register/register_reg[21]_i} {core/register/register_reg[22]_i} {core/register/register_reg[23]_i} {core/register/register_reg[24]_i} {core/register/register_reg[25]_i} {core/register/register_reg[26]_i} {core/register/register_reg[27]_i} {core/register/register_reg[28]_i} {core/register/register_reg[29]_i} {core/register/register_reg[2]_i} {core/register/register_reg[30]_i} {core/register/register_reg[31]_i} {core/register/register_reg[3]_i} {core/register/register_reg[4]_i} {core/register/register_reg[5]_i} {core/register/register_reg[6]_i} {core/register/register_reg[7]_i} {core/register/register_reg[8]_i} {core/register/register_reg[9]_i} 
+1028122 {vga/number_i} P
+577562F {vga/ascii_code1_i__4} {vga/ascii_code2_i__4} {vga/ascii_code3_i__6} "
+143388 {vga/U12/v_count_i__0} >
+6349064 {vga/number0_i__0} {vga/number1_i} {vga/number2_i}  
+106517 {core/alu/res_ADD_i} #
+131075 {BTN_SCAN/clk_count0_i} 6
+118794, {core/add_IF/c_i} {core/add_branch_ID/c_i} U
+274437K {DISPLAY/P2S_LED/next_data_count0_i} {DISPLAY/P2S_SEG/next_data_count0_i} P
+561178F {vga/ascii_code1_i__3} {vga/ascii_code2_i__3} {vga/ascii_code3_i__5} P
+593946F {vga/ascii_code1_i__5} {vga/ascii_code2_i__5} {vga/ascii_code3_i__7} V
+1110042K {vga/num2str0_i} {vga/num2str0_i__1} {vga/strdata0_i} {vga/strdata0_i__0} #
+90135 {core/data_ram/douta2_i} O
+278533E {DISPLAY/P2S_LED/next_state_i__0} {DISPLAY/P2S_SEG/next_state_i__0} M
+569349C {DISPLAY/P2S_LED/cycle_count0_i} {DISPLAY/P2S_SEG/cycle_count0_i} P
+528410F {vga/ascii_code1_i__1} {vga/ascii_code2_i__1} {vga/ascii_code3_i__3} P
+622618F {vga/ascii_code1_i__6} {vga/ascii_code2_i__6} {vga/ascii_code3_i__8} 
+454682 {vga/RTL_ADD} 5
+167939+ {BTN_SCAN/btn_x_i} {BTN_SCAN/result_i__0} 
+208922 {vga/row_addr_i} Å
+blackBoxInfo
+vga/c2i1	Code2Inst
+vga/c2i2	Code2Inst
+vga/c2i3	Code2Inst
+vga/c2i4	Code2Inst
+vga/c2i5	Code2Inst˛
+synth_design
+isIncremental0
+Runtime1
+Threads used2T
+argsL-verilog_define default::[not_specified] -top  top -part  xc7k325tffg676-2L 
+resynthPerc0.00
+Cputime1
+blackBoxPercinf
+	directive õ
+synth_design_metrics$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+caseNotFullNoDefault4
+	smallSrls-1
+srlsWithResetLogic7
+shallowRAMWithAttribute-1
+hierMFO0
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0
+RQS_Results

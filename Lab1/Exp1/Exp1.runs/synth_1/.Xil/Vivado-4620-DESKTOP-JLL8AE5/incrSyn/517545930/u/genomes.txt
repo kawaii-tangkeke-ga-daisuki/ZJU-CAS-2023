@@ -1,0 +1,3 @@
+RAM_B
+RV32core__GB1
+top__GC0

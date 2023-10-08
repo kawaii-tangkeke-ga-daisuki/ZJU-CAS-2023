@@ -10,14 +10,19 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.srcs/utils_1/imports/synth_1/top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7k325tffg676-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28576
+INFO: [Synth 8-7075] Helper process launched with PID 6472
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'Addr', assumed default net type 'wire' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RV32core.v:182]
 INFO: [Synth 8-11241] undeclared symbol 'MWR', assumed default net type 'wire' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RV32core.v:183]
@@ -27,7 +32,7 @@ INFO: [Synth 8-11241] undeclared symbol 'clkout2', assumed default net type 'wir
 INFO: [Synth 8-11241] undeclared symbol 'clkout3', assumed default net type 'wire' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/my_clk_gen.v:143]
 WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/parallel2serial.v:10]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1267.441 ; gain = 406.680
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1271.230 ; gain = 408.668
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/top.v:8]
 INFO: [Synth 8-6157] synthesizing module 'clk_diff' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/clk_diff.v:7]
@@ -100,7 +105,7 @@ INFO: [Synth 8-6155] done synthesizing module 'add_32' (0#1) [C:/Users/12656/Des
 INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/MUX2T1_32.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/MUX2T1_32.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ROM_D' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:3]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'rom2.hex'; please make sure the file is added to project and has read permission, ignoring [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:11]
+INFO: [Synth 8-3876] $readmem data file 'rom.hex' is read successfully [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'ROM_D' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:3]
 INFO: [Synth 8-6157] synthesizing module 'REG_IF_ID' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_IF_ID.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'REG_IF_ID' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_IF_ID.v:22]
@@ -115,6 +120,7 @@ INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (0#1) [C:/Users/12656/
 INFO: [Synth 8-6157] synthesizing module 'cmp_32' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/cmp_32.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'cmp_32' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/common/cmp_32.v:3]
 INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:3]
+WARNING: [Synth 8-6090] variable 'PC_EN_IF' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:3]
 INFO: [Synth 8-6157] synthesizing module 'REG_ID_EX' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'REG_ID_EX' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.v:22]
@@ -208,111 +214,6 @@ INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/12656/Desktop/Computer 
 INFO: [Synth 8-6155] done synthesizing module 'vga' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/vga.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'VGA_TESTP' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/VGATEST.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/auxillary/top.v:8]
-WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-WARNING: [Synth 8-3848] Net inst_data in module/entity ROM_D does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/ROM_D.v:8]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-7137] Register A_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.v:84]
 WARNING: [Synth 8-7137] Register B_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.v:85]
 WARNING: [Synth 8-7137] Register Imm32_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_ID_EX.v:86]
@@ -339,6 +240,8 @@ RAM "data_reg" dissolved into registers
 WARNING: [Synth 8-7137] Register ALUO_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_MEM_WB.v:50]
 WARNING: [Synth 8-7137] Register MDR_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_MEM_WB.v:51]
 WARNING: [Synth 8-7137] Register DatatoReg_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/REG_MEM_WB.v:54]
+WARNING: [Synth 8-3848] Net Addr in module/entity RV32core does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RV32core.v:182]
+WARNING: [Synth 8-3848] Net MWR in module/entity RV32core does not have driver. [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/RV32core.v:183]
 WARNING: [Synth 8-7129] Port MEM_Addr[31] in module VGA_TESTP is either unconnected or has no load
 WARNING: [Synth 8-7129] Port MEM_Addr[30] in module VGA_TESTP is either unconnected or has no load
 WARNING: [Synth 8-7129] Port MEM_Addr[29] in module VGA_TESTP is either unconnected or has no load
@@ -365,6 +268,7 @@ WARNING: [Synth 8-7129] Port MEM_Addr[9] in module VGA_TESTP is either unconnect
 WARNING: [Synth 8-7129] Port MEM_Addr[1] in module VGA_TESTP is either unconnected or has no load
 WARNING: [Synth 8-7129] Port MEM_Addr[0] in module VGA_TESTP is either unconnected or has no load
 WARNING: [Synth 8-7129] Port flush in module REG_EX_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module HazardDetectionUnit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Branch_ID in module HazardDetectionUnit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rs2_EXE[4] in module HazardDetectionUnit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rs2_EXE[3] in module HazardDetectionUnit is either unconnected or has no load
@@ -401,18 +305,18 @@ WARNING: [Synth 8-7129] Port SW[10] in module top is either unconnected or has n
 WARNING: [Synth 8-7129] Port SW[9] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[8] in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.273 ; gain = 534.512
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1398.957 ; gain = 536.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.273 ; gain = 534.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1398.957 ; gain = 536.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1395.273 ; gain = 534.512
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1398.957 ; gain = 536.395
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1395.781 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1398.957 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -426,29 +330,31 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1507.352 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1473.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
   RAMB16_S1 => RAMB18E1: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1507.352 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1473.836 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1507.352 ; gain = 646.590
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.836 ; gain = 611.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1507.352 ; gain = 646.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.836 ; gain = 611.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1507.352 ; gain = 646.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.836 ; gain = 611.273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'btn_x_reg' in module 'btn_scan'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'parallel2serial'
@@ -483,8 +389,15 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                   S_DONE |                               11 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'parallel2serial__parameterized0'
+WARNING: [Synth 8-327] inferring latch for variable 'PC_EN_IF_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:17]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_FD_EN_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_FD_stall_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:25]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_FD_flush_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_ctrl_ls_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_ctrl_A_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:34]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_ctrl_B_reg' [C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/code/core/HazardDetectionUnit.v:36]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1507.352 ; gain = 646.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1473.836 ; gain = 611.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -516,8 +429,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 5     
 	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 32    
+	                1 Bit    Registers := 27    
 +---RAMs : 
 	              128 Bit	(4 X 32 bit)          RAMs := 1     
 +---Muxes : 
@@ -526,6 +438,7 @@ Detailed RTL Component Info :
 	   4 Input   57 Bit        Muxes := 1     
 	   2 Input   39 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 13    
+	  76 Input   32 Bit        Muxes := 1     
 	   2 Input   24 Bit        Muxes := 1     
 	   2 Input   20 Bit        Muxes := 1     
 	   4 Input   17 Bit        Muxes := 1     
@@ -545,10 +458,10 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit        Muxes := 4     
 	  16 Input    4 Bit        Muxes := 8     
 	   3 Input    2 Bit        Muxes := 6     
-	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 5     
 	   2 Input    2 Bit        Muxes := 10    
-	   4 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 61    
+	   2 Input    1 Bit        Muxes := 64    
+	   3 Input    1 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 12    
 	   5 Input    1 Bit        Muxes := 2     
 	   6 Input    1 Bit        Muxes := 5     
@@ -573,191 +486,5 @@ WARNING: [Synth 8-7129] Port SW[11] in module top is either unconnected or has n
 WARNING: [Synth 8-7129] Port SW[10] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[9] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[8] in module top is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1507.352 ; gain = 646.590
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+------------+------------+---------------+----------------+
-|Module Name | RTL Object | Depth x Width | Implemented As | 
-+------------+------------+---------------+----------------+
-|VGA_TESTP   | strdata    | 32x49         | LUT            | 
-|VGA_TESTP   | strdata    | 32x49         | LUT            | 
-+------------+------------+---------------+----------------+
-
-
-Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+--------------+-----------+----------------------+-------------+
-|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
-+------------+--------------+-----------+----------------------+-------------+
-|i_0/vga     | data_buf_reg | Implied   | 4 x 32               | RAM32M x 6  | 
-+------------+--------------+-----------+----------------------+-------------+
-
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1507.352 ; gain = 646.590
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1635.031 ; gain = 774.270
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping Report
-+------------+--------------+-----------+----------------------+-------------+
-|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
-+------------+--------------+-----------+----------------------+-------------+
-|i_0/vga     | data_buf_reg | Implied   | 4 x 32               | RAM32M x 6  | 
-+------------+--------------+-----------+----------------------+-------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|top         | DISPLAY/P2S_SEG/buff_reg[61] | 6      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-+------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |Code2Inst     |         5|
-+------+--------------+----------+
-
-Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |Code2Inst  |     5|
-|6     |BUFG       |     6|
-|7     |CARRY4     |    27|
-|8     |LUT1       |     9|
-|9     |LUT2       |   117|
-|10    |LUT3       |    68|
-|11    |LUT4       |    67|
-|12    |LUT5       |   147|
-|13    |LUT6       |   573|
-|14    |MMCME2_ADV |     1|
-|15    |MUXF7      |    61|
-|16    |MUXF8      |    14|
-|17    |RAM32M     |     5|
-|18    |RAM32X1D   |     2|
-|19    |RAMB16_S1  |     1|
-|20    |SRL16E     |     7|
-|21    |FDCE       |   150|
-|22    |FDRE       |   363|
-|23    |FDSE       |    20|
-|24    |IBUF       |    14|
-|25    |IBUFGDS    |     1|
-|26    |OBUF       |    25|
-+------+-----------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1637.590 ; gain = 664.750
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1637.590 ; gain = 776.828
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1637.590 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1637.590 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 9 instances were transformed.
-  IBUFGDS => IBUFDS: 1 instance 
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 5 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
-  RAMB16_S1 => RAMB18E1: 1 instance 
-
-Synth Design complete, checksum: 71f32423
-INFO: [Common 17-83] Releasing license: Synthesis
-109 Infos, 186 Warnings, 1 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1637.590 ; gain = 1236.211
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/12656/Desktop/Computer Arch/Lab1/Exp1/Exp1.runs/synth_1/top.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 25 18:53:39 2023...
+WARNING: [Synth 8-3332] Sequential element (reg_FD_EN_reg) is unused and will be removed from module HazardDetectionUnit.
+WARNING: [Synth 8-3332] Sequential element (reg_FD_flush_reg) is unused and will be removed from module HazardDetectionUnit.
