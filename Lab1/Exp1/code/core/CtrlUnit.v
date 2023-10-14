@@ -104,7 +104,7 @@ module CtrlUnit(
 
     assign ALUSrc_A = AUIPC | JAL | JALR;                         //to fill sth. in 
 
-    assign ALUSrc_B = L_valid | S_valid | I_valid;                         //to fill sth. in 
+    assign ALUSrc_B = L_valid | S_valid | I_valid | AUIPC | LUI;                         //to fill sth. in 
 
     parameter ALU_ADD  = 4'b0001;
     parameter ALU_SUB  = 4'b0010;

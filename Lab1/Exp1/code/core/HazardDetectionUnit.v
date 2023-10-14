@@ -26,7 +26,7 @@ module HazardDetectionUnit(
     wire forward_rs2_LD = rs2use_ID & rs2_ID != 5'b0 & rs2_ID == rd_MEM & hazard_optype_MEM == 2'b10;
 
     wire stall = (rs1use_ID & rs1_ID != 5'b0 & rs1_ID == rd_EXE & hazard_optype_EXE == 2'b10 & hazard_optype_ID != 2'b11) |
-                (rs2use_ID & rs2_ID != 5'b0 & rs2_ID == rd_EXE & hazard_optype_EXE == 2'b10 & hazard_optype_ID != 2'b11); // ld after sd
+                (rs2use_ID & rs2_ID != 5'b0 & rs2_ID == rd_EXE & hazard_optype_EXE == 2'b10 & hazard_optype_ID != 2'b11); 
 
     assign reg_FD_stall = stall;
     
@@ -47,5 +47,5 @@ module HazardDetectionUnit(
                             {2{forward_rs2_MEM}} & 2'b10 |
                             {2{forward_rs2_LD}} & 2'b11;
 
-    assign forward_ctrl_ls = (rs2_EXE == rd_MEM) & (hazard_optype_EXE == 2'b11) & (hazard_optype_MEM == 2'b10);
+    assign forward_ctrl_ls = (rs2_EXE == rd_MEM) & (hazard_optype_EXE == 2'b11) & (hazard_optype_MEM == 2'b10); //sd after ld
 endmodule
