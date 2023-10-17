@@ -1,3 +1,0 @@
-top: top__GC0, RV32core__GB1, RAM_B, 
-RV32core: RV32core__GB1, RAM_B, 
-clk_diff: 
