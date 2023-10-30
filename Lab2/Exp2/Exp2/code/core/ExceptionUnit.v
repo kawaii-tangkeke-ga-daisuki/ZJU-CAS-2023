@@ -27,131 +27,148 @@ module ExceptionUnit(
     output RegWrite_cancel
 );
 
-    reg[11:0] csr_raddr, csr_waddr;
-    reg[31:0] csr_wdata;
-    reg csr_w;
-    reg[1:0] csr_wsc;
+    wire[11:0] csr_raddr, csr_waddr;
+    wire[31:0] csr_wdata;
+    wire csr_w;
+    wire[1:0] csr_wsc;
 
     wire[31:0] mstatus;
 
-    reg [2:0] state = 3'd0;
+    reg [2:0] state = 3'd0; // ?????��?????????????
     
+    reg[31:0] EPC; // exception pc == ecp_cur
     
     reg [1:0] thisType = 2'd0;
-    wire [1:0] exp_type;
+    wire [1:0] exceptionType;
     
-    localparam MSTATUS = 12'h300;
-    localparam MTVEC   = 12'h305;
-    localparam MEPC    = 12'h341;
-    localparam MCAUSE  = 12'h342;
-    localparam MTVAL   = 12'h343;
-    localparam MIE     = 12'h304;
+    parameter MSTATUS = 12'h300;
+    parameter MTVEC   = 12'h305;
+    parameter MEPC    = 12'h341;
+    parameter MCAUSE  = 12'h342;
+    parameter MTVAL   = 12'h343;
+    parameter MIE     = 12'h304;
     
-    localparam BAD_INST = 2'd0;
-    localparam ECALL = 2'd1;
-    localparam INTERRUPT = 2'd2;
-    localparam MRET = 2'd3;
-    assign exp_type = {2{illegal_inst | l_access_fault | s_access_fault}} & BAD_INST |
-                        {2{ecall_m}} & ECALL |
-                        {2{interrupt & mstatus[3]}} & interrupt |
-                        {2{mret}} & MRET;
+    parameter badInstructionType = 2'd0;
+    parameter ecallType = 2'd1;
+    parameter interruptType = 2'd2;
+    parameter mretType = 2'd3;
+    assign exceptionType =  (badInstructionType & {2{illegal_inst | l_access_fault | s_access_fault}}) |
+                            (ecallType & {2{ecall_m}}) | 
+                            (interruptType & {2{interrupt & mstatus[3]}}) | 
+                            (mretType & {2{mret}}); 
 
-    wire trap_init;
-    assign trap_init = illegal_inst | l_access_fault | s_access_fault |
+    wire startState;
+    assign startState = illegal_inst | l_access_fault | s_access_fault |
                         ecall_m | interrupt & mstatus[3] | mret | (state != 3'd0);
+
+    assign reg_FD_flush = (state == 3'd1) || (state == 3'd7);
+    assign reg_DE_flush = (state == 3'd1) || (state == 3'd7);
+    assign reg_EM_flush = (state == 3'd1) || (state == 3'd7);
+    assign reg_MW_flush = (state == 3'd1) || (state == 3'd7);
+    assign RegWrite_cancel = (state == 3'd1) || (state == 3'd7);
+    
+    assign PC_redirect = csr_r_data_out;    
+//    assign PC_redirect = exceptionType == mretType? csr_r_data_out:mepc;
+    assign redirect_mux = (state == 3'd1) || (state == 3'd7);
 
 
     reg[31:0] prev_epc_cur;
     reg[31:0] prev_epc_next;
-    reg [31:0] EPC;
-    always @(posedge trap_init or posedge clk or posedge rst) begin
+    
+    // ????state????
+    always @(posedge startState or posedge clk or posedge rst) begin
+//    always @(posedge clk or posedge rst) begin
         if (rst) begin
             state <= 3'd0;
         end
-        else begin 
-            case (state)
-                3'b000: begin
-                    if(trap_init) begin
-                        if(exp_type != INTERRUPT) begin
-                            state = 3'b001;
-                        end else begin
-                            state = 3'b111;
-                            prev_epc_cur <= epc_cur;
-                            prev_epc_next <= epc_next; 
-                        end
-                        thisType <= exp_type;
-                        EPC <= epc_cur;
-                    end
-                end
-                3'b001: state = 3'b010;
-                3'b010: state = 3'b011;
-                3'b011: state = 3'b100;
-                3'b100: state = 3'b000;
-                3'b111: state = 3'b001;
-                default: ;
-            endcase
+        else if (state == 3'd0 & startState) begin 
+            if(exceptionType != interruptType) begin
+                state <= 3'd1;
+            end
+            else begin
+                state <= 3'd7;
+                prev_epc_cur <= epc_cur;
+                prev_epc_next <= epc_next;         
+            end
+            thisType <= exceptionType;
+            EPC <= epc_cur;
+        end
+        else if(state == 3'd7) begin
+            state <= 3'd1;
+        end
+        else if (state == 3'd1) begin 
+            state <= 3'd2;
+        end
+        else if (state == 3'd2) begin 
+            state <= 3'd3;
+        end 
+        else if (state == 3'd3) begin 
+            state <= 3'd4;
+        end
+        else if (state == 3'd4) begin 
+            state <= 3'd0;
         end
     end
 
+    wire [11:0] jumpDest;
+    assign jumpDest = thisType == mretType ? MEPC : MTVEC;
 
-    reg [31:0] mcause_w = 0;
+    wire [31:0] cause = 0;
+
+    // ????CSR????
     always @(negedge clk) begin
         if (rst) begin
-            csr_w <= 0;
-        end else begin
-            case(state)
-                3'b000: begin
-                    csr_w     <= csr_rw_in;
-                    csr_raddr <= csr_rw_addr_in;
-                    csr_waddr <= csr_rw_addr_in;
-                    csr_wsc   <= csr_wsc_mode_in;
-                    csr_wdata <= csr_w_imm_mux ? {{27{0}},csr_w_data_imm} : csr_w_data_reg;
-                end
-                3'b001: begin
-                    csr_w <= thisType != 2'b11;
-                    csr_raddr <= (thisType == MRET) ? MEPC : MTVEC;
-                    csr_waddr <= MEPC;
-                    csr_wdata <= (thisType == INTERRUPT) ? prev_epc_next : epc_cur;
-                    csr_wsc   <= 2'b01;
-       
-                    mcause_w <= illegal_inst ? 32'h2 : (l_access_fault ? 32'h5 : (s_access_fault ? 32'h7 : (ecall_m ? 32'hb : 32'h2)));                          
-                end 
-               3'b010: begin 
-                    csr_w <= thisType != 2'b11;
-                    csr_raddr <= MEPC;
-                    csr_waddr <= MCAUSE;
-                    csr_wdata <= mcause_w;
-                    csr_wsc   <= 2'b01;
-                end
-                3'b011: begin 
-                    csr_w     <= 1'b1;
-                    csr_raddr <= MEPC;
-                    csr_waddr <= MTVAL;
-                    csr_wdata <= EPC;
-                    csr_wsc <= 2'b01;
-                end 
-                3'b100: begin 
-                    csr_w     <= 1'b1;
-                    csr_raddr <= MEPC;
-                    csr_waddr <= MSTATUS;
-                    csr_wdata <= (thisType == MRET) ? {mstatus[31:8], 1'b0, mstatus[6:4], mstatus[7], mstatus[2:0]} : {mstatus[31:8], mstatus[3], mstatus[6:4], 1'b0, mstatus[2:0]};
-                    csr_wsc <= 2'b01;
-                end
-             endcase
+//            csr_w <= 0;
+        end
+        else if (state == 3'd0) begin 
+
+        end
+        else if (state == 3'd1) begin 
+
+            
+        end 
+        else if (state == 3'd2) begin 
+
+        end
+        else if (state == 3'd3) begin 
+
+        end 
+        else if (state == 3'd4) begin 
+
         end
     end
+    // assign csr_w = rst ? 1'b0 : 1'b1;
+
+    assign cause =  ecall_m ? 32'hb : (l_access_fault ? 32'h5 : 
+                        (s_access_fault ? 32'h7 : (illegal_inst ? 32'h2 : 32'hb)));
+
+    assign csr_w = ((state == 3'b000) & csr_rw_in) |
+                    ((state == 3'b001) & thisType != 2'b11) |
+                    ((state == 3'b010) & thisType != 2'b11) |
+                    ((state == 3'b011) & 1'b1) |
+                    ((state == 3'b100) & 1'b1);
+
+    assign csr_raddr = (state == 3'b000) ?  csr_rw_addr_in : ((state == 3'b001) ? jumpDest : 12'h0);
+
+    assign csr_waddr = (state == 3'b000) ? csr_rw_addr_in : 
+                                        ((state == 3'b001) ? MEPC : 
+                                        ((state == 3'b010) ? MCAUSE : 
+                                        ((state == 3'b011) ? MTVAL : 
+                                        ((state == 3'b100) ? MSTATUS : 12'h0))));
+
+    assign csr_wsc = (state == 3'b000) ? csr_wsc_mode_in : ((state == 3'b001) ? 2'b01 : 
+                                        ((state == 3'b010) ? 2'b01 : 
+                                        ((state == 3'b011) ? 2'b01 : 2'b00)));
+    
+    assign csr_wdata = (state == 3'b000) ? (csr_w_imm_mux ? {{27{0}},csr_w_data_imm} : csr_w_data_reg) :
+                    ((state == 3'b001) ? (thisType == interruptType? prev_epc_next:epc_cur) :
+                    ((state == 3'b010) ? cause :
+                    ((state == 3'b011) ? EPC :
+                    ((state == 3'b100) ? (thisType == mretType ? 
+                         {mstatus[31:8], 1'b0, mstatus[6:4], mstatus[7], mstatus[2:0]}: 
+                         {mstatus[31:8], mstatus[3], mstatus[6:4], 1'b0, mstatus[2:0]}) : 32'h0))));
 
     CSRRegs csr(.clk(clk),.rst(rst),.csr_w(csr_w),.raddr(csr_raddr),.waddr(csr_waddr),
         .wdata(csr_wdata),.rdata(csr_r_data_out),.mstatus(mstatus),.csr_wsc_mode(csr_wsc));
-        
-    wire flush = (state == 3'b001) | (state == 3'b111);
-    assign reg_FD_flush = flush;
-    assign reg_DE_flush = flush;
-    assign reg_EM_flush = flush;
-    assign reg_MW_flush = flush;
-    assign RegWrite_cancel = flush;
-    
-    assign PC_redirect = csr_r_data_out;    
-    assign redirect_mux = flush;
 
 endmodule
