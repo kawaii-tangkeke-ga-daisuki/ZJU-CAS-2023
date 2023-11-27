@@ -1,0 +1,735 @@
+/*
+
+Xilinx Vivado v2020.2.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3118627 on Tue Feb  9 05:14:06 MST 2021
+IP Build: 3115676 on Tue Feb  9 10:48:11 MST 2021
+
+Process ID (PID): 23100
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Nov 24 21:36:10 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 150
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	D:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	45951
+User home directory: C:/Users/45951
+User working directory: D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2020.2
+RDI_DATADIR: D:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/45951/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/45951/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/45951/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/vivado.log
+Vivado journal file location: 	D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/vivado.jou
+Engine tmp dir: 	D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/.Xil/Vivado-23100-DESKTOP-OV5USUM
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: D:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	149 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,120 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 86 MB (+88149kb) [00:00:06]
+// [Engine Memory]: 1,120 MB (+1022863kb) [00:00:06]
+// aK (cr): Older Project Version: addNotify
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,120 MB. GUI used memory: 70 MB. Current time: 11/24/23, 9:36:11 PM CST
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Opening Vivado Project: D:\45951\Desktop\minnanotangkeke\CAS\Computer-Arch\Lab5\Exp5\Exp5.xpr. Version: Vivado v2018.2 
+// bz (cr):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+dismissDialog("Older Project Version"); // aK
+// Tcl Message: open_project D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/Exp5.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 96 MB (+5814kb) [00:00:42]
+// [GUI Memory]: 133 MB (+33859kb) [00:00:43]
+// WARNING: HEventQueue.dispatchEvent() is taking  2839 ms.
+// Tcl Message: open_project D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/Exp5.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Zonghui Wang/Desktop/risc v/Code4Stu/Exp5' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: INFO: [Project 1-230] Project 'Exp5.xpr' upgraded for this version of Vivado. 
+// Project name: Exp5; location: D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5; part: xc7k325tffg676-2L
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1159.453 ; gain = 0.000 
+dismissDialog("Open Project"); // bz
+// ak (cr): Project Upgraded: addNotify
+selectButton(PAResourceQtoS.ReportIPStatusInfoDialog_REPORT_IP_STATUS, "Report IP Status"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+dismissDialog("Project Upgraded"); // ak
+// Tcl Message: report_ip_status -name ip_status  
+// bz (cr):  Report IP Status : addNotify
+dismissDialog("Report IP Status"); // bz
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// aj (cr): Upgrade IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// ad (cr): Enable Core Container: addNotify
+dismissDialog("Upgrade IP"); // aj
+selectRadioButton(PAResourceTtoZ.UpgradeIP_CONVERT_IP_TO_CORE_CONTAINER_AND_SET, "Convert IP to Core Container and Set as Default in Project"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'aa' command handler elapsed time: 5 seconds
+// TclEventType: RUN_MODIFY
+dismissDialog("Enable Core Container"); // ad
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// bz (cr):  Upgrade IP : addNotify
+// TclEventType: RUN_DELETE
+// Tcl Message: upgrade_ip -srcset divider [get_ips  {divider multiplier}] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'divider' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Project 1-386] Moving file 'D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/Exp5.srcs/sources_1/ip/divider/divider.xci' from fileset 'divider' to fileset 'sources_1'. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded divider (Divider Generator 5.1) from revision 13 to revision 17 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'divider'... 
+// Tcl Message: Upgrading 'multiplier' 
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [Project 1-386] Moving file 'D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/Exp5.srcs/sources_1/ip/multiplier/multiplier.xci' from fileset 'multiplier' to fileset 'sources_1'. INFO: [IP_Flow 19-3422] Upgraded multiplier (Multiplier 12.0) from revision 14 to revision 16 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'multiplier'... INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips {divider multiplier}] -no_script -sync -force -quiet 
+dismissDialog("Upgrade IP"); // bz
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceItoN.IPStatusSectionPanel_RE_RUN_REPORT, (String) null); // E
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v)]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v)]", 5); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2); // D
+// [GUI Memory]: 143 MB (+3109kb) [00:02:00]
+// Elapsed time: 48 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_ALU.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_ALU.v]", 3, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 185 seconds
+selectCodeEditor("FU_ALU.v", 143, 454); // bP
+// Elapsed time: 419 seconds
+selectCodeEditor("FU_ALU.v", 176, 68); // bP
+selectCodeEditor("FU_ALU.v", 207, 223); // bP
+selectCodeEditor("FU_ALU.v", 159, 292); // bP
+selectCodeEditor("FU_ALU.v", 141, 286); // bP
+selectCodeEditor("FU_ALU.v", 124, 279); // bP
+selectCodeEditor("FU_ALU.v", 138, 277); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("FU_ALU.v", 134, 124); // bP
+selectCodeEditor("FU_ALU.v", 154, 208); // bP
+selectCodeEditor("FU_ALU.v", 157, 221); // bP
+selectCodeEditor("FU_ALU.v", 179, 174); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("FU_ALU.v", 130, 249); // bP
+selectCodeEditor("FU_ALU.v", 132, 526); // bP
+// Elapsed time: 24 seconds
+selectCodeEditor("FU_ALU.v", 272, 459); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_div.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_div.v]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("FU_div.v", 65, 255); // bP
+// Elapsed time: 34 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v)]", 26); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+// [Engine Memory]: 1,179 MB (+2999kb) [00:14:55]
+dismissDialog("Re-customize IP"); // r
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 85 MB. Current time: 11/24/23, 9:50:56 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Implementation Details", 1); // cV
+dismissDialog("Re-customize IP"); // r
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v)]", 26); // D
+selectCodeEditor("FU_div.v", 368, 276); // bP
+selectCodeEditor("FU_div.v", 174, 287); // bP
+selectCodeEditor("FU_div.v", 341, 340); // bP
+selectCodeEditor("FU_div.v", 316, 365); // bP
+selectCodeEditor("FU_div.v", 207, 328); // bP
+selectCodeEditor("FU_div.v", 256, 502); // bP
+selectCodeEditor("FU_div.v", 222, 504); // bP
+selectCodeEditor("FU_div.v", 150, 499); // bP
+selectCodeEditor("FU_div.v", 444, 442); // bP
+selectCodeEditor("FU_div.v", 62, 416); // bP
+// Elapsed time: 79 seconds
+selectCodeEditor("FU_div.v", 291, 366); // bP
+selectCodeEditor("FU_div.v", 274, 388); // bP
+selectCodeEditor("FU_div.v", 275, 418); // bP
+selectCodeEditor("FU_div.v", 271, 448); // bP
+selectCodeEditor("FU_div.v", 256, 475); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("FU_div.v", 204, 250); // bP
+selectCodeEditor("FU_div.v", 217, 249); // bP
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v)]", 26); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // r
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), du : FU_div (FU_div.v), div : divider (divider.xci)]", 27, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ah
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+// Elapsed time: 11 seconds
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectCodeEditor("FU_div.v", 747, 308); // bP
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), mu : FU_mul (FU_mul.v)]", 25); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), mu : FU_mul (FU_mul.v), mul : multiplier (multiplier.xci)]", 26, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), mu : FU_mul (FU_mul.v), mul : multiplier (multiplier.xci)]", 26, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Output and Control", 1); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Information", 1); // bi
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "IP Symbol", 0); // bi
+dismissDialog("Re-customize IP"); // r
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_ALU.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_ALU.v]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("FU_ALU.v", 237, 131); // bP
+selectCodeEditor("FU_ALU.v", 153, 138); // bP
+selectCodeEditor("FU_ALU.v", 291, 451); // bP
+selectCodeEditor("FU_ALU.v", 89, 360); // bP
+selectCodeEditor("FU_ALU.v", 82, 350); // bP
+selectCodeEditor("FU_ALU.v", 91, 347); // bP
+selectCodeEditor("FU_ALU.v", 73, 342); // bP
+selectCodeEditor("FU_ALU.v", 251, 496); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FU_ALU.v", 357, 384); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_div.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_div.v]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("FU_div.v", 50, 180); // bP
+selectCodeEditor("FU_div.v", 41, 177); // bP
+selectCodeEditor("FU_div.v", 38, 177); // bP
+// Elapsed time: 259 seconds
+selectCodeEditor("FU_div.v", 43, 214); // bP
+selectCodeEditor("FU_div.v", 42, 172); // bP
+selectCodeEditor("FU_div.v", 27, 173); // bP
+selectCodeEditor("FU_div.v", 35, 173); // bP
+selectCodeEditor("FU_div.v", 54, 207); // bP
+selectCodeEditor("FU_div.v", 38, 203); // bP
+// Elapsed time: 32 seconds
+selectCodeEditor("FU_div.v", 41, 197); // bP
+selectCodeEditor("FU_div.v", 76, 201); // bP
+selectCodeEditor("FU_div.v", 25, 202); // bP
+selectCodeEditor("FU_div.v", 45, 204); // bP
+selectCodeEditor("FU_div.v", 40, 204); // bP
+selectCodeEditor("FU_div.v", 42, 248); // bP
+selectCodeEditor("FU_div.v", 83, 253); // bP
+selectCodeEditor("FU_div.v", 39, 202); // bP
+// Elapsed time: 50 seconds
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "16"); // h
+selectCodeEditor("FU_div.v", 47, 217); // bP
+selectCodeEditor("FU_div.v", 38, 237); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 91 MB. Current time: 11/24/23, 10:20:56 PM CST
+// [GUI Memory]: 150 MB (+200kb) [00:48:26]
+// Elapsed time: 1696 seconds
+selectCodeEditor("FU_div.v", 27, 187); // bP
+selectCodeEditor("FU_div.v", 41, 197); // bP
+selectCodeEditor("FU_div.v", 40, 197); // bP
+selectCodeEditor("FU_div.v", 81, 317); // bP
+selectCodeEditor("FU_div.v", 37, 209); // bP
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("FU_mem.v", 65, 417); // bP
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, RV32core.v]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, RV32core.v]", 7, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mul.v]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mul.v]", 6, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_jump.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 1133 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 83 MB. Current time: 11/24/23, 10:50:57 PM CST
+// Elapsed time: 126 seconds
+selectCodeEditor("FU_div.v", 202, 421); // bP
+selectCodeEditor("FU_div.v", 340, 409); // bP
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32core.v", 4); // m
+// Elapsed time: 29 seconds
+selectCodeEditor("RV32core.v", 432, 340); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("RV32core.v", 173, 175); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), ctrl : CtrlUnit (CtrlUnit.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), ctrl : CtrlUnit (CtrlUnit.v)]", 17, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("CtrlUnit.v", 94, 156); // bP
+selectCodeEditor("CtrlUnit.v", 93, 473); // bP
+selectCodeEditor("CtrlUnit.v", 95, 474); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("CtrlUnit.v", 217, 252); // bP
+// Elapsed time: 39 seconds
+selectCodeEditor("CtrlUnit.v", 215, 283); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32core.v", 4); // m
+selectCodeEditor("RV32core.v", 164, 339); // bP
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CtrlUnit.v", 6); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 120, 366); // bP
+selectCodeEditor("FU_div.v", 84, 359); // bP
+selectCodeEditor("FU_div.v", 62, 359); // bP
+selectCodeEditor("FU_div.v", 309, 341); // bP
+selectCodeEditor("FU_div.v", 34, 384); // bP
+selectCodeEditor("FU_div.v", 95, 367); // bP
+selectCodeEditor("FU_div.v", 95, 367); // bP
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectCodeEditor("FU_ALU.v", 156, 241); // bP
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 180, 200); // bP
+selectCodeEditor("FU_div.v", 286, 205); // bP
+selectCodeEditor("FU_div.v", 129, 442); // bP
+selectCodeEditor("FU_div.v", 86, 421); // bP
+selectCodeEditor("FU_div.v", 153, 436); // bP
+selectCodeEditor("FU_div.v", 128, 367); // bP
+selectCodeEditor("FU_div.v", 155, 275); // bP
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+// Elapsed time: 25 seconds
+selectCodeEditor("FU_div.v", 211, 182); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("FU_div.v", 183, 148); // bP
+selectCodeEditor("FU_div.v", 189, 148); // bP
+selectCodeEditor("FU_div.v", 331, 173); // bP
+selectCodeEditor("FU_div.v", 325, 161); // bP
+selectCodeEditor("FU_div.v", 230, 187); // bP
+selectCodeEditor("FU_div.v", 220, 191); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("FU_div.v", 134, 232); // bP
+selectCodeEditor("FU_div.v", 156, 236); // bP
+selectCodeEditor("FU_div.v", 268, 232); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("FU_div.v", 268, 555); // bP
+selectCodeEditor("FU_div.v", 254, 495); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("FU_div.v", 172, 519); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("FU_div.v", 271, 493); // bP
+selectCodeEditor("FU_div.v", 119, 543); // bP
+// WARNING: HEventQueue.dispatchEvent() is taking  8613174 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 84 MB. Current time: 11/25/23, 1:32:37 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2872891 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 2:20:31 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  3829366 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 3:24:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 5:03:53 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 7:11:44 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1618212 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  6325929 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 9:24:11 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  3153844 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 10:16:46 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 11:22:23 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2265778 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 82 MB. Current time: 11/25/23, 12:00:09 PM CST
+// Elapsed time: 47022 seconds
+selectCodeEditor("FU_div.v", 154, 335); // bP
+selectCodeEditor("FU_div.v", 249, 441); // bP
+selectCodeEditor("FU_div.v", 265, 441); // bP
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 247, 177); // bP
+selectCodeEditor("FU_div.v", 228, 410); // bP
+selectCodeEditor("FU_div.v", 116, 384); // bP
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 190, 142); // bP
+selectCodeEditor("FU_div.v", 240, 258); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+// Elapsed time: 25 seconds
+selectCodeEditor("FU_div.v", 304, 439); // bP
+selectCodeEditor("FU_div.v", 292, 447); // bP
+selectCodeEditor("FU_div.v", 284, 504); // bP
+selectCodeEditor("FU_div.v", 286, 443); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("FU_div.v", 32, 250); // bP
+selectCodeEditor("FU_div.v", 404, 437); // bP
+// WARNING: HEventQueue.dispatchEvent() is taking  1795534 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 83 MB. Current time: 11/25/23, 12:45:49 PM CST
+// Elapsed time: 2483 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 246, 347); // bP
+selectCodeEditor("FU_div.v", 221, 379); // bP
+selectCodeEditor("FU_div.v", 205, 368); // bP
+selectCodeEditor("FU_div.v", 205, 368); // bP
+selectCodeEditor("FU_div.v", 174, 365); // bP
+selectCodeEditor("FU_div.v", 101, 313); // bP
+selectCodeEditor("FU_div.v", 107, 313); // bP
+selectCodeEditor("FU_div.v", 87, 371); // bP
+selectCodeEditor("FU_div.v", 117, 371); // bP
+selectCodeEditor("FU_div.v", 65, 121); // bP
+selectCodeEditor("FU_div.v", 229, 414); // bP
+selectCodeEditor("FU_div.v", 214, 76); // bP
+selectCodeEditor("FU_div.v", 214, 104); // bP
+selectCodeEditor("FU_div.v", 214, 70); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("FU_div.v", 223, 129); // bP
+// Elapsed time: 120 seconds
+selectCodeEditor("FU_div.v", 221, 233); // bP
+selectCodeEditor("FU_div.v", 365, 191); // bP
+selectCodeEditor("FU_div.v", 224, 234); // bP
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+// Elapsed time: 24 seconds
+selectCodeEditor("FU_mul.v", 307, 192); // bP
+selectCodeEditor("FU_mul.v", 286, 194); // bP
+selectCodeEditor("FU_mul.v", 286, 194); // bP
+selectCodeEditor("FU_mul.v", 352, 198); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 177, 151); // bP
+selectCodeEditor("FU_div.v", 230, 371); // bP
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_jump.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_jump.v]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2575 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2576 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3674 ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 2576ms to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 83 MB. Current time: 11/25/23, 2:11:23 PM CST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6249 ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 4867 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 225, 283); // bP
+selectCodeEditor("FU_div.v", 225, 283); // bP
+selectCodeEditor("FU_div.v", 234, 166); // bP
+selectCodeEditor("FU_div.v", 264, 265); // bP
+selectCodeEditor("FU_div.v", 184, 261); // bP
+selectCodeEditor("FU_div.v", 218, 276); // bP
+selectCodeEditor("FU_div.v", 210, 296); // bP
+selectCodeEditor("FU_div.v", 210, 296); // bP
+selectCodeEditor("FU_div.v", 218, 275); // bP
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_ALU.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mem.v", 3); // m
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32core.v", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mem.v", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+selectCodeEditor("FU_mul.v", 59, 391); // bP
+// Elapsed time: 103 seconds
+selectCodeEditor("FU_mul.v", 234, 287); // bP
+selectCodeEditor("FU_mul.v", 169, 421); // bP
+selectCodeEditor("FU_mul.v", 129, 420); // bP
+selectCodeEditor("FU_mul.v", 139, 410); // bP
+selectCodeEditor("FU_mul.v", 148, 390); // bP
+selectCodeEditor("FU_mul.v", 139, 389); // bP
+selectCodeEditor("FU_mul.v", 27, 339); // bP
+selectCodeEditor("FU_mul.v", 38, 339); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("FU_mul.v", 147, 415); // bP
+selectCodeEditor("FU_mul.v", 130, 425); // bP
+selectCodeEditor("FU_mul.v", 141, 425); // bP
+selectCodeEditor("FU_mul.v", 138, 421); // bP
+selectCodeEditor("FU_mul.v", 31, 397); // bP
+selectCodeEditor("FU_mul.v", 34, 397); // bP
+selectCodeEditor("FU_mul.v", 35, 417); // bP
+selectCodeEditor("FU_mul.v", 313, 382); // bP
+selectCodeEditor("FU_mul.v", 302, 361); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("FU_mul.v", 166, 488); // bP
+selectCodeEditor("FU_mul.v", 320, 463); // bP
+selectCodeEditor("FU_mul.v", 272, 502); // bP
+selectCodeEditor("FU_mul.v", 272, 502); // bP
+selectCodeEditor("FU_mul.v", 37, 493); // bP
+selectCodeEditor("FU_mul.v", 298, 308); // bP
+selectCodeEditor("FU_mul.v", 284, 317); // bP
+selectCodeEditor("FU_mul.v", 233, 311); // bP
+selectCodeEditor("FU_mul.v", 233, 311); // bP
+selectCodeEditor("FU_mul.v", 285, 317); // bP
+// Elapsed time: 33 seconds
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectButton(RDIResourceCommand.RDICommands_REDO, (String) null); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), mu : FU_mul (FU_mul.v), mul : multiplier (multiplier.xci)]", 24, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, core_sim (core_sim.v), core : RV32core (RV32core.v), mu : FU_mul (FU_mul.v), mul : multiplier (multiplier.xci)]", 24, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // r
+selectCodeEditor("FU_mul.v", 165, 190); // bP
+selectCodeEditor("FU_mul.v", 337, 109); // bP
+selectCodeEditor("FU_mul.v", 245, 87); // bP
+selectCodeEditor("FU_mul.v", 148, 212); // bP
+selectCodeEditor("FU_mul.v", 182, 102); // bP
+selectCodeEditor("FU_mul.v", 255, 261); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("FU_mul.v", 183, 406); // bP
+selectCodeEditor("FU_mul.v", 217, 509); // bP
+selectCodeEditor("FU_mul.v", 190, 400); // bP
+selectCodeEditor("FU_mul.v", 277, 374); // bP
+// Elapsed time: 65 seconds
+selectCodeEditor("FU_mul.v", 306, 343); // bP
+// Elapsed time: 140 seconds
+selectCodeEditor("FU_mul.v", 208, 388); // bP
+selectCodeEditor("FU_mul.v", 290, 345); // bP
+// Elapsed time: 29 seconds
+selectCodeEditor("FU_mul.v", 153, 287); // bP
+selectCodeEditor("FU_mul.v", 164, 306); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mem.v", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectCodeEditor("FU_div.v", 162, 218); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+selectCodeEditor("FU_mul.v", 237, 325); // bP
+selectCodeEditor("FU_mul.v", 238, 319); // bP
+selectCodeEditor("FU_mul.v", 69, 340); // bP
+selectCodeEditor("FU_mul.v", 70, 363); // bP
+selectCodeEditor("FU_mul.v", 212, 366); // bP
+selectCodeEditor("FU_mul.v", 212, 366); // bP
+// Elapsed time: 52 seconds
+selectCodeEditor("FU_mul.v", 146, 397); // bP
+selectCodeEditor("FU_mul.v", 131, 406); // bP
+// Elapsed time: 41 seconds
+selectCodeEditor("FU_mul.v", 149, 304); // bP
+selectCodeEditor("FU_mul.v", 160, 306); // bP
+selectCodeEditor("FU_mul.v", 154, 306); // bP
+selectCodeEditor("FU_mul.v", 148, 306); // bP
+selectCodeEditor("FU_mul.v", 121, 446); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("FU_mul.v", 175, 421); // bP
+selectCodeEditor("FU_mul.v", 191, 449); // bP
+selectCodeEditor("FU_mul.v", 328, 444); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("FU_mul.v", 342, 362); // bP
+selectCodeEditor("FU_mul.v", 202, 363); // bP
+selectCodeEditor("FU_mul.v", 202, 363); // bP
+selectCodeEditor("FU_mul.v", 282, 367); // bP
+selectCodeEditor("FU_mul.v", 149, 343); // bP
+selectCodeEditor("FU_mul.v", 181, 353); // bP
+selectCodeEditor("FU_mul.v", 149, 356); // bP
+selectCodeEditor("FU_mul.v", 162, 357); // bP
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_div.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FU_mul.v", 5); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, RV32core.v]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, RV32core.v]", 5, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 4, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 60 seconds
+selectCodeEditor("FU_mem.v", 292, 476); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("FU_mem.v", 163, 220); // bP
+selectCodeEditor("FU_mem.v", 399, 477); // bP
+selectCodeEditor("FU_mem.v", 564, 466); // bP
+selectCodeEditor("FU_mem.v", 137, 500); // bP
+selectCodeEditor("FU_mem.v", 346, 499); // bP
+selectCodeEditor("FU_mem.v", 182, 424); // bP
+selectCodeEditor("FU_mem.v", 39, 427); // bP
+selectCodeEditor("FU_mem.v", 39, 427); // bP
+selectCodeEditor("FU_mem.v", 154, 39); // bP
+selectCodeEditor("FU_mem.v", 160, 159); // bP
+// WARNING: HEventQueue.dispatchEvent() is taking  347094 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10414283 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2619 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 85 MB. Current time: 11/25/23, 5:31:14 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2632733 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,179 MB. GUI used memory: 85 MB. Current time: 11/25/23, 6:15:17 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1257 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1491 ms.
+// Elapsed time: 13686 seconds
+selectCodeEditor("FU_mem.v", 39, 159); // bP
+selectCodeEditor("FU_mem.v", 57, 360); // bP
+// Elapsed time: 55 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_jump.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_jump.v]", 3, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, FU_mem.v]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("FU_mem.v", 44, 417); // bP
+selectCodeEditor("FU_mem.v", 41, 417); // bP
+selectCodeEditor("FU_mem.v", 30, 417); // bP
+selectCodeEditor("FU_mem.v", 37, 417); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("FU_mem.v", 95, 365); // bP
+selectCodeEditor("FU_mem.v", 102, 425); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("FU_mem.v", 33, 441); // bP
+selectCodeEditor("FU_mem.v", 73, 435); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("FU_mem.v", 73, 435); // bP
