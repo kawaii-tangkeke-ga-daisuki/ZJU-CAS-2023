@@ -161,7 +161,7 @@ module CtrlUnit(
     wire use_JUMP = B_valid | JAL | JALR;
 
     // normal stall: structural hazard or WAW
-    assign normal_stall = FUS[use_FU][`BUSY] | (RRS[dst] != `FU_BLANK);           //fill sth. here
+    assign normal_stall = (use_FU == 3'b0 ? 1'b0 : FUS[use_FU][`BUSY]) | (RRS[dst] != `FU_BLANK);           //fill sth. here
 
     assign IS_en = IS_flush | ~normal_stall & ~ctrl_stall;
     assign RO_en = ~IS_flush & ~normal_stall & ~ctrl_stall;
@@ -380,11 +380,11 @@ module CtrlUnit(
             end
 
             // EX
-            FUS[`FU_ALU][`FU_DONE] <= ALU_done;   //fill sth. here
-            FUS[`FU_MEM][`FU_DONE] <= MEM_done;
-            FUS[`FU_MUL][`FU_DONE] <= MUL_done;
-            FUS[`FU_DIV][`FU_DONE] <= DIV_done;
-            FUS[`FU_JUMP][`FU_DONE] <= JUMP_done;   //fill sth. here
+            FUS[`FU_ALU][`FU_DONE] <= FUS[`FU_ALU][`FU_DONE] ? FUS[`FU_ALU][`FU_DONE] : ALU_done;   //fill sth. here
+            FUS[`FU_MEM][`FU_DONE] <= FUS[`FU_MEM][`FU_DONE] ? FUS[`FU_MEM][`FU_DONE] : MEM_done;
+            FUS[`FU_MUL][`FU_DONE] <= FUS[`FU_MUL][`FU_DONE] ? FUS[`FU_MUL][`FU_DONE] : MUL_done;
+            FUS[`FU_DIV][`FU_DONE] <= FUS[`FU_DIV][`FU_DONE] ? FUS[`FU_DIV][`FU_DONE] : DIV_done;
+            FUS[`FU_JUMP][`FU_DONE] <= FUS[`FU_JUMP][`FU_DONE] ? FUS[`FU_JUMP][`FU_DONE] : JUMP_done;   //fill sth. here
 
             // WB
             // JUMP
@@ -404,7 +404,7 @@ module CtrlUnit(
                 if (FUS[`FU_DIV][`FU2_H:`FU2_L] == `FU_JUMP) FUS[`FU_DIV][`RDY2] <= 1'b1;           //fill sth. here
             end
             // ALU
-            if (FUS[`FU_ALU][`FU_DONE] & ALU_WAR) begin
+            else if (FUS[`FU_ALU][`FU_DONE] & ALU_WAR) begin
                 FUS[`FU_ALU] <= 32'b0;
                 RRS[FUS[`FU_ALU][`DST_H:`DST_L]] <= 3'b0;
 
@@ -420,7 +420,7 @@ module CtrlUnit(
                 if (FUS[`FU_JUMP][`FU1_H:`FU1_L] == `FU_ALU) FUS[`FU_JUMP][`RDY2] <= 1'b1;
             end           //fill sth. here
             // MEM
-            if (FUS[`FU_MEM][`FU_DONE] & MEM_WAR) begin
+            else if (FUS[`FU_MEM][`FU_DONE] & MEM_WAR) begin
                 FUS[`FU_MEM] <= 32'b0;
                 RRS[FUS[`FU_MEM][`DST_H:`DST_L]] <= 3'b0;
 
@@ -436,7 +436,7 @@ module CtrlUnit(
                 if (FUS[`FU_JUMP][`FU1_H:`FU1_L] == `FU_MEM) FUS[`FU_JUMP][`RDY2] <= 1'b1;
             end           //fill sth. here
             // MUL
-            if (FUS[`FU_MUL][`FU_DONE] & MUL_WAR) begin
+            else if (FUS[`FU_MUL][`FU_DONE] & MUL_WAR) begin
                 FUS[`FU_MUL] <= 32'b0;
                 RRS[FUS[`FU_MUL][`DST_H:`DST_L]] <= 3'b0;
 
@@ -452,7 +452,7 @@ module CtrlUnit(
                 if (FUS[`FU_JUMP][`FU1_H:`FU1_L] == `FU_MUL) FUS[`FU_JUMP][`RDY2] <= 1'b1;
             end           //fill sth. here
             // DIV
-            if (FUS[`FU_DIV][`FU_DONE] & DIV_WAR) begin
+            else if (FUS[`FU_DIV][`FU_DONE] & DIV_WAR) begin
                 FUS[`FU_DIV] <= 32'b0;
                 RRS[FUS[`FU_DIV][`DST_H:`DST_L]] <= 3'b0;
 
