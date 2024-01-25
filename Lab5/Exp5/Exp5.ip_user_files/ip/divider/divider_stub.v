@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-// Date        : Sat Nov 25 23:13:33 2023
+// Date        : Thu Jan 25 20:29:06 2024
 // Host        : DESKTOP-OV5USUM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab5/Exp5/Exp5.srcs/sources_1/ip/divider/divider_stub.v

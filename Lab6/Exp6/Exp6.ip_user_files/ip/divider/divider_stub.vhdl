@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
--- Date        : Tue Dec 12 16:08:03 2023
+-- Date        : Thu Jan 25 22:12:48 2024
 -- Host        : DESKTOP-OV5USUM running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab6/Exp6/Exp6.srcs/sources_1/ip/divider_1/divider_stub.vhdl
+--               d:/45951/Desktop/minnanotangkeke/CAS/Computer-Arch/Lab6/Exp6/Exp6.srcs/sources_1/ip/divider/divider_stub.vhdl
 -- Design      : divider
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg676-2L
