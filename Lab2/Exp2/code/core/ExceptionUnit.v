@@ -102,9 +102,6 @@ module ExceptionUnit(
         else if (state == 3'd4) begin 
             state <= 3'd0;
         end
-        else if (state == 3'd5) begin
-            state <= 3'd0;
-        end
     end
     
     initial begin
